@@ -30,7 +30,7 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 print('Welcome to the Treasure Island!')
 print('Your mission is find the treasure.')
 
-direction = input('Type "left" or "right":\n')
+direction = input('You are at the crossroad, where do you want to go.\nType "left" or "right":\n')
 
 
 if direction.lower() == 'left':
