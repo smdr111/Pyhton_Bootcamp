@@ -13,7 +13,6 @@ from logo import log
 print(log)
 
 word = random.choice(words)
-print(word)
 
 line = '-'*len(word)
 print(f'Word to guess: {line}')
