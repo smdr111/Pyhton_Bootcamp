@@ -10,10 +10,9 @@ class NotificationManager:
         self.auth_token = os.getenv("TWILIO_AUTH_TOKEN")
         self.whatsapp_number = os.getenv("TWILIO_WHATSAPP_NUMBER")
         self.verified_number = os.getenv("TWILIO_VERIFIED_NUMBER")
-
-    def send_whatsapp(self,message):
-        client = Client(self.account_sid, self.auth_token)
-        news = client.messages.create(
+        awlf.client = Client(self.account_sid, self.auth_token)
+    def send_whatsapp(self,message):    
+        news = self.client.messages.create(
             body=message,
             from_=f"whatsapp:{self.whatsapp_number}",
             to=f"whatsapp:{self.verified_number}"
