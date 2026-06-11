@@ -16,7 +16,7 @@ class NotificationManager:
         news = client.messages.create(
             body=message,
             from_=f"whatsapp:{self.whatsapp_number}",
-            to=self.verified_number
+            to=f"whatsapp:{self.verified_number}"
         )
         return news.sid
 
